@@ -9,12 +9,12 @@ notes.get('/', (req, res) =>
 );
 
 notes.post('/', (req, res) => {
-  const { title, text: note } = req.body;
+  const { title, text } = req.body;
 
-  if ( title && note ) {
+  if ( title && text ) {
     const newNote = {
       title,
-      note,
+      text,
       noteId: uuid(),
     };
 
@@ -32,8 +32,18 @@ notes.post('/', (req, res) => {
   }
 );
 
-notes.delete('/:id', (req, res) =>  {
+notes.delete('/:id', (req, res) => {
+  const noteIdToDelete = req.params.id;
 
-})
+  readFromFile('./db/db.json')
+    .then((data) => {
+      const notesData = JSON.parse(data);
+      const updatedNotes = notesData.filter((note) => note.noteId !== noteIdToDelete);
+      writeToFile('./db/db.json', updatedNotes);
+
+      res.json({ status: 'success', message: 'Note deleted successfully' });
+    })
+    .catch((err) => res.status(500).json({ error: err.message }));
+});
 
 module.exports = notes;
