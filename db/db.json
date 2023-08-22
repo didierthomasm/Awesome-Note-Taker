@@ -2,16 +2,26 @@
     {
         "title": "Apple",
         "text": "Apple are reds.",
-        "noteId": "1c5d"
+        "id": "1c5d"
     },
     {
         "title": "Banana",
         "text": "Bananas when are ready to eat are yellow.",
-        "noteId": "85d4"
+        "id": "85d4"
     },
     {
         "title": "Watermelon",
         "text": "Watermelon is red.",
-        "noteId": "1c5e"
+        "id": "1c5e"
+    },
+    {
+        "title": "Kiwi",
+        "text": "Just eat the green.",
+        "id": "e5ef"
+    },
+    {
+        "title": "Cheese",
+        "text": "Not always is yellow.",
+        "id": "570d"
     }
 ]
