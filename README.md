@@ -60,7 +60,8 @@ and managing notes, helping you stay productive and focused.
 
 ## Deployment
 
-The project is deployed on Heroku. You can access the live application at: [Note Taker App](https://your-heroku-app-url.herokuapp.com/)
+The project is deployed on Heroku. 
+You can access the live application at: [Note Taker App](https://blooming-wave-16905-6f0bb0bb3d6e.herokuapp.com/)
 
 ## Contributing
 
