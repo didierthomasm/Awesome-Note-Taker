@@ -38,7 +38,7 @@ notes.delete('/:id', (req, res) => {
   readFromFile('./db/db.json')
     .then((data) => {
       const notesData = JSON.parse(data);
-      const updatedNotes = notesData.filter((note) => note.noteId !== noteIdToDelete);
+      const updatedNotes = notesData.filter((note) => note.id !== noteIdToDelete);
       writeToFile('./db/db.json', updatedNotes);
 
       res.json({ status: 'success', message: 'Note deleted successfully' });
